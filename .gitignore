@@ -1,0 +1,8 @@
+# FreeCAD backups / autosaves
+*.FCBak
+*.FCStd1
+*.FCStd.bak
+# Slicer autosaves
+*_autosave/
+*.lyt
+__pycache__/
