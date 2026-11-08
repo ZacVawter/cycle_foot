@@ -106,13 +106,12 @@ Lessons learned:
 
 ### V2: threaded inserts and a separate sole
 
-- Uses heat-set threaded inserts:
-  - M4 bolts (cleat): [McMaster-Carr 94180A361](https://www.mcmaster.com/94180A361/)
-  - M4 tapered heat-set inserts for plastic:
-    [McMaster-Carr category](https://www.mcmaster.com/products/threaded-inserts/for-use-in~plastic-1/tapered-heat-set-inserts-for-plastic-7/thread-type~metric/)
-    (link may be broken).
-    [E-Z LOK manufacturer spec sheet](https://www.ezlok.com/assets/documents/dimensional_drawings/DimDwg_Ultra_Tapered.pdf)
-  - M3 bolts: [McMaster-Carr 94180A333](https://www.mcmaster.com/94180A333/)
+- Uses tapered brass heat-set inserts:
+  - Cleat: M5 inserts, [McMaster-Carr 94180A361](https://www.mcmaster.com/94180A361/)
+    (the original notes labelled these "M4 bolts")
+  - M3 inserts, [McMaster-Carr 94180A333](https://www.mcmaster.com/94180A333/),
+    (probably for the sole bolt-on holes, removed in V3.7; unused in V3.7)
+  - [E-Z LOK manufacturer spec sheet](https://www.ezlok.com/assets/documents/dimensional_drawings/DimDwg_Ultra_Tapered.pdf)
 - Introduced the separate printed sole (the wear plate suggested after V1).
 
 ### V3 – V3.7: parametric FreeCAD model
