@@ -18,7 +18,7 @@ November 2026).
 
 | Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening | In use |
 | --- | --- | --- |
-| ![Cycle foot, top view](docs/images/cycle_foot-top.png) | ![Cycle foot, bottom view](docs/images/cycle_foot-bottom.png) | ![The cycle foot (red) on an above-knee prosthesis with an Össur Total Knee 2100 under a silicone sleeve, clipped into a mountain bike pedal](docs/images/cycle_foot-in-use.jpg) |
+| <img src="docs/images/cycle_foot-top.png" alt="Cycle foot, top view" height="240"> | <img src="docs/images/cycle_foot-bottom.png" alt="Cycle foot, bottom view" height="240"> | <img src="docs/images/cycle_foot-in-use.jpg" alt="The cycle foot (red) on an above-knee prosthesis with an Össur Total Knee 2100 under a silicone sleeve, clipped into a mountain bike pedal" height="240"> |
 
 *Right: the designer's own setup, an Össur Total Knee 2100, with the cycle foot
 clamped to the pylon. A silicone sleeve slides over the outside of the
