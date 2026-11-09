@@ -275,7 +275,7 @@ Lessons learned:
 ### V3 – V3.7: parametric FreeCAD model
 
 The original notes stop at V2. The V3.x summaries below come from the CAD
-files, apart from V3.7, which the designer described directly.
+files, apart from V3.7, which I described directly.
 
 - **V3** (Oct 2023): small adjustment to the foot geometry.
 - **V3.1** (Nov 2023): rebuilt around a `Parameters` spreadsheet (pylon

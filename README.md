@@ -8,13 +8,13 @@ walk short distances off the bike.
 
 Designed by an amputee, for amputees, in [FreeCAD](https://www.freecad.org/).
 It supports SPD and Crank Brothers cleats. The cleat sits 70 mm in front of
-the pylon, which lets the designer unlock an Össur Total Knee 2100 while
+the pylon, which lets me unlock my Össur Total Knee 2100 while
 riding. Whether it works for you depends on your knee, alignment and setup.
 See [DESIGN.md](DESIGN.md)
 for the requirements and what each version taught us.
 The model is fully parametric, so the design can be adapted if needed.
 
-**This is a real device in regular use.** The designer has ridden it for
+**This is a real device in regular use.** I have ridden it for
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
 November 2026).
 
@@ -22,7 +22,7 @@ November 2026).
 | --- | --- | --- |
 | <img src="docs/images/cycle_foot-top.png" alt="Cycle foot, top view" height="240"> | <img src="docs/images/cycle_foot-bottom.png" alt="Cycle foot, bottom view" height="240"> | <img src="docs/images/cycle_foot-in-use.jpg" alt="The cycle foot (red) on an above-knee prosthesis with an Össur Total Knee 2100 under a silicone sleeve, clipped into a mountain bike pedal" height="240"> |
 
-*Right: the designer's own setup, an Össur Total Knee 2100, with the cycle foot
+*Right: my own setup, an Össur Total Knee 2100, with the cycle foot
 clamped to the pylon. A silicone sleeve slides over the outside of the
 socket and extends below the knee. It is intended to reduce the risk of the
 socket and knee damaging the bike's carbon frame if they hit it, as is the
@@ -50,7 +50,7 @@ TPU sole at the foot.*
 
 ### Material
 
-The designer has printed the **Foot** in these two carbon-fibre-filled
+I have printed the **Foot** in these two carbon-fibre-filled
 nylons:
 
 | Filament | Tensile strength (X–Y) | Data sheet |
