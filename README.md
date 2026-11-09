@@ -16,7 +16,7 @@ Fully parametric: adjust the dimensions to fit your own leg and setup.
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
 November 2026).
 
-<img src="docs/images/cycle_foot-in-use.jpg" alt="The cycle foot (red) on a transfemoral prosthesis, clipped into a mountain bike pedal" width="420">
+<img src="docs/images/cycle_foot-in-use.jpg" alt="The cycle foot (red) on a prosthetic leg, clipped into a mountain bike pedal" width="420">
 
 | Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening |
 | --- | --- |
