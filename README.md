@@ -16,7 +16,7 @@ The model is fully parametric, so the design can be adapted if needed.
 
 **This is a real device in regular use.** I have ridden it for
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
-November 2026).
+November 2026), across three prints and several minor design revisions.
 
 | Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening | In use |
 | --- | --- | --- |
