@@ -65,7 +65,7 @@ printer, settings, infill and filament moisture all change the result.
 **Whatever you print, do your own validation before relying on it** (see
 [DESIGN.md](DESIGN.md#validation)).
 
-**Avoid PLA, resin and PETG for the Foot.** The designer has broken test feet
+**Avoid PLA, resin and PETG for the Foot.** I have broken test feet
 printed in PLA and in resin.
 
 Nylon absorbs moisture, which weakens the print. Dry the filament before
