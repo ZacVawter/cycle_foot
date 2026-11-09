@@ -8,7 +8,7 @@ walk short distances off the bike.
 
 Designed by an amputee, for amputees, in [FreeCAD](https://www.freecad.org/).
 It supports SPD and Crank Brothers cleats and is sized so Össur Total Knee
-users can still unlock the knee. See the [design history](docs/design-history.md)
+users can still unlock the knee. See [DESIGN.md](DESIGN.md)
 for the requirements and what each version taught us.
 Fully parametric: adjust the dimensions to fit your own leg and setup.
 
@@ -125,66 +125,19 @@ The pocket sizes also match E-Z LOK tapered inserts
 3. Slide the Foot onto the pylon and tighten the three M4 clamp bolts evenly.
    Check that the foot can't rotate on the pylon before you ride.
 
-## Repository layout
+## Design, customisation and analysis
 
-| Path | Contents |
-| --- | --- |
-| `cad/cycle_foot.FCStd` | **Source model** (FreeCAD 1.x, current version v3.7). Edit this one. |
-| `exports/step/` | STEP files for each part, for use in other CAD software |
-| `exports/stl/` | STL files ready to slice and print |
-| `docs/images/` | Renderings |
-| `docs/design-history.md` | Requirements, load cases and lessons learned from every revision |
-| `tools/export.py` | Script that regenerates `exports/` from the source model |
-
-## Previous versions
-
-Each design revision is a tagged commit (`v0` … `v3.7`) with its STEP and STL
-exports, so you can download or compare any earlier version from the
-[tags page](https://github.com/ZacVawter/cycle_foot/tags). Run
-`git log --stat` to see how the design evolved, and read
-[docs/design-history.md](docs/design-history.md) for why it changed.
-
-## Parts
-
-| Part | File | Notes |
-| --- | --- | --- |
-| Foot | `exports/stl/cycle_foot-foot.stl` | Pylon clamp, gusset, and cleat mount. Structural part. |
-| Sole | `exports/stl/cycle_foot-sole.stl` | Walking shell with grip pattern and mud ramp |
-
-Hardware (inserts, bolts, cleat) is listed under
-[Printing & setup](#printing--setup).
-
-## Customising for your leg
-
-Open `cad/cycle_foot.FCStd` and edit the **`Parameters`** spreadsheet. The whole
-model updates from these values:
-
-| Alias | Default | Meaning |
-| --- | --- | --- |
-| `pilon_dia` | 30 mm | Pylon tube diameter |
-| `pilon_to_cleat` | 70 mm | Pylon centreline to cleat centreline |
-| `cleat_to_toe` | 25 mm | Cleat centreline to toe |
-| `cleat_to_top_clamp` | 89.5 mm | Cleat centreline to top clamp |
-| `cleat_to_bottom_clamp` | 92 mm | Cleat centreline to bottom clamp |
-| `clamp_top_bolt` | 47 mm | Height of top clamp bolt |
-| `clamp_mid_bolt` | 27 mm | Height of middle clamp bolt |
-| `clamp_bottom_bolt` | 7.5 mm | Height of bottom clamp bolt |
-
-After editing, regenerate the print files:
-
-```sh
-freecadcmd tools/export.py      # Snap install: freecad.cmd tools/export.py
-```
-
-The model also has a FEM analysis (CalculiX), with a fixed constraint and a
-500 N load, that you can re-run after changing the geometry.
+Most people only need the sections above. To change the dimensions for your
+leg, re-run the structural analysis (FEA), or read about the requirements and
+what earlier versions taught us, see **[DESIGN.md](DESIGN.md)**.
 
 ## Contributing
 
 Ride reports, fit changes, photos and design improvements are welcome. Open an
-issue or a pull request. If you change the geometry, please commit the updated
-`cad/cycle_foot.FCStd` **and** re-run `tools/export.py` so the STEP/STL files
-match the source.
+issue or a pull request. If you change the geometry or material, re-run the
+FEA, commit the updated `cad/cycle_foot.FCStd`, **and** re-run
+`tools/export.py` so the STEP/STL files match the source (see
+[DESIGN.md](DESIGN.md)).
 
 ## License
 
