@@ -56,7 +56,7 @@ nylons:
 | Filament | Tensile strength (X–Y) | Data sheet |
 | --- | --- | --- |
 | Bambu Lab **PAHT-CF** | 88 ± 7 MPa | [TDS](https://cdn.shopify.com/s/files/1/0380/5149/files/Bambu_PAHT-CF_Technical_Data_Sheet.pdf) |
-| Bambu Lab **PA6-CF** (current build) | 102 ± 7 MPa | [TDS](https://polyalkemi.no/wp-content/uploads/2024/01/Bambu_PA6-CF_Technical_Data_Sheet-v2.pdf) |
+| Bambu Lab **PA6-CF** (current build) | 102 ± 7 MPa | [TDS](https://store.bblcdn.com/b2abc59ac250492b979a52f1ce3e61b3.pdf) |
 
 This is what has worked for one rider, not a validated material
 specification. Other filaments with similar published strength may work, but

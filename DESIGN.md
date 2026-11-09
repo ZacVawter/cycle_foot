@@ -103,7 +103,8 @@ and for comparing design changes against each other.
 
 For reference only: the peak tension (21 MPa) and peak von Mises stress
 (58 MPa) are below the published specimen strengths of the filaments used
-(Bambu PAHT-CF, 64 MPa between layers; PA6-CF, 102 MPa in-plane). But specimen
+(Bambu PA6-CF: 48 MPa between layers, 102 MPa in-plane; PAHT-CF: 64 MPa
+between layers). But specimen
 strengths do not transfer directly to a printed part, and an isotropic solid
 model cannot establish the safety margin of an anisotropic printed part.
 
