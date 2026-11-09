@@ -103,6 +103,11 @@ next. With the foot bed flat, the pylon clamp's hoop stress (from tightening
 the clamp bolts) and the load spread across the foot bed are intended to run
 mainly *along* the layers. Tilts of up to 20° toe-up have also been used.
 
+**After printing, clear the pylon clamp slot.** The slot is narrow, and the
+printer often bridges across it, which joins the two sides of the clamp and
+makes it hard to tighten. Open it up fully before assembly. A sharp knife may
+be needed.
+
 ### Installing the heat-set inserts
 
 The Foot uses tapered brass heat-set inserts. The holes are already shaped to
