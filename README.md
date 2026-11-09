@@ -12,6 +12,10 @@ users can still unlock the knee. See the [design history](docs/design-history.md
 for the requirements and what each version taught us.
 Fully parametric: adjust the dimensions to fit your own leg and setup.
 
+| Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening |
+| --- | --- |
+| ![Cycle foot, top view](docs/images/cycle_foot-top.png) | ![Cycle foot, bottom view](docs/images/cycle_foot-bottom.png) |
+
 > ## ⚠️ Safety notice — read before use
 >
 > This is a **homemade, unregulated prosthetic component**. It is **not** a
@@ -24,8 +28,7 @@ Fully parametric: adjust the dimensions to fit your own leg and setup.
 >   every ride**. Replace it at the first sign of damage.
 > - Start with low-intensity riding and build up gradually.
 > - **CRITICAL: Print quality, material and settings strongly affect
->   strength. A part printed by you is only as good as your print.** Follow
->   [Printing & setup](#printing--setup) exactly.
+>   strength. A part printed by you is only as good as your print.**
 >
 > You use this design entirely at your own risk. See the disclaimer of
 > warranty and limitation of liability in [LICENSE](LICENSE), section 6.
@@ -34,8 +37,8 @@ Fully parametric: adjust the dimensions to fit your own leg and setup.
 
 ### Material
 
-Print the **Foot** in a carbon-fibre-filled nylon. Both of these are
-acceptable:
+Print the **Foot** in a carbon-fibre-filled nylon. Both of these have
+been used:
 
 | Filament | Tensile strength (X–Y) | Data sheet |
 | --- | --- | --- |
@@ -62,18 +65,19 @@ next. With the foot bed flat, the pylon clamp's hoop stress (from tightening
 the clamp bolts) and the load spread across the foot bed both run *along*
 the layers. A tilt of up to 20° toe-up has also been tested.
 
-The **Sole** is not structural and can be printed in a tougher, more flexible
-material.
+Print the **Sole** in **TPU**. It isn't structural, but the soft material
+protects the bike if the foot hits the frame, and it grips on a range of
+surfaces when you walk.
 
 ### Installing the heat-set inserts
 
 The Foot uses tapered brass heat-set inserts. The holes are already shaped to
-fit them, so no drilling is needed.
+fit them. **Do NOT drill** them.
 
 | Location | Qty | Insert | McMaster-Carr |
 | --- | --- | --- | --- |
 | Cleat mount | 2 | M5 × 0.8, tapered | [94180A361](https://www.mcmaster.com/94180A361/) |
-| Pylon clamp | 2 | M4 × 0.7, 7.9 mm long, tapered | [94180A353](https://www.mcmaster.com/94180A353/) |
+| Pylon clamp | 3 | M4 × 0.7, 7.9 mm long, tapered | [94180A353](https://www.mcmaster.com/94180A353/) |
 
 The pocket sizes also match E-Z LOK tapered inserts
 ([dimensional drawing](https://www.ezlok.com/assets/documents/dimensional_drawings/DimDwg_Ultra_Tapered.pdf)).
@@ -97,7 +101,7 @@ The pocket sizes also match E-Z LOK tapered inserts
 
 | Item | Qty | Notes |
 | --- | --- | --- |
-| M4 × 20 mm socket head cap screw | 2 | Pylon clamp. Passes through the 4.3 mm clearance holes into the M4 inserts. |
+| M4 × 20 mm socket head cap screw | 3 | Pylon clamp. Passes through the 4.3 mm clearance holes into the M4 inserts. |
 | Cleat and M5 cleat bolts | 1 set | SPD or Crank Brothers, as supplied with your pedals |
 | Crankbrothers MTB Shoe Shields | 1 | Thin metal plate fitted between the cleat and the print |
 
@@ -106,7 +110,7 @@ The pocket sizes also match E-Z LOK tapered inserts
    away. You may need slightly longer cleat bolts to allow for its thickness.
    Check that each bolt engages the full length of its insert.
 2. Bolt the cleat on through the shield into the M5 inserts.
-3. Slide the Foot onto the pylon and tighten the two M4 clamp bolts evenly.
+3. Slide the Foot onto the pylon and tighten the three M4 clamp bolts evenly.
    Check that the foot can't rotate on the pylon before you ride.
 
 ## Repository layout
@@ -116,6 +120,7 @@ The pocket sizes also match E-Z LOK tapered inserts
 | `cad/cycle_foot.FCStd` | **Source model** (FreeCAD 1.x, current version v3.7). Edit this one. |
 | `exports/step/` | STEP files for each part, for use in other CAD software |
 | `exports/stl/` | STL files ready to slice and print |
+| `docs/images/` | Renderings |
 | `docs/design-history.md` | Requirements, load cases and lessons learned from every revision |
 | `tools/export.py` | Script that regenerates `exports/` from the source model |
 
