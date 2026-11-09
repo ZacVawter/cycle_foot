@@ -48,7 +48,19 @@ TPU sole at the foot.*
 
 ## Printing & setup
 
+### Files
+
+| Part | STL (to print) | STEP (for CAD) |
+| --- | --- | --- |
+| Foot | [cycle_foot-foot.stl](exports/stl/cycle_foot-foot.stl) | [cycle_foot-foot.step](exports/step/cycle_foot-foot.step) |
+| Sole | [cycle_foot-sole.stl](exports/stl/cycle_foot-sole.stl) | [cycle_foot-sole.step](exports/step/cycle_foot-sole.step) |
+
+GitHub shows STL files in a 3D viewer. To download them all at once, use the
+[latest release](https://github.com/ZacVawter/cycle_foot/releases/latest).
+
 ### Material
+
+#### Foot
 
 I have printed the **Foot** in these two carbon-fibre-filled
 nylons:
@@ -71,7 +83,15 @@ printed in PLA and in resin.
 Nylon absorbs moisture, which weakens the print. Dry the filament before
 printing, following the manufacturer's data sheet, and print from a dry box.
 
-### Print settings
+#### Sole
+
+I have printed the **Sole** in Bambu Lab **TPU 95A HF**
+([TDS](https://store.bblcdn.com/58df32731eab4c90a7dac9b12e13ba88.pdf)). The Sole
+isn't structural. The soft TPU is intended to help protect the bike if the
+foot hits the frame, and to grip on a range of surfaces when you walk. Other
+TPUs of similar hardness (Shore 95A) are a reasonable starting point.
+
+### Print settings (Foot)
 
 | Setting | Value |
 | --- | --- |
@@ -82,10 +102,6 @@ The reasoning: 3D-printed parts are usually weakest where one layer joins the
 next. With the foot bed flat, the pylon clamp's hoop stress (from tightening
 the clamp bolts) and the load spread across the foot bed are intended to run
 mainly *along* the layers. Tilts of up to 20° toe-up have also been used.
-
-Print the **Sole** in **TPU**. It isn't structural. The soft material is
-intended to help protect the bike if the foot hits the frame, and to grip on a
-range of surfaces when you walk.
 
 ### Installing the heat-set inserts
 
