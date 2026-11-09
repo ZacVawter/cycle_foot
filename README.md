@@ -12,6 +12,10 @@ users can still unlock the knee. See the [design history](docs/design-history.md
 for the requirements and what each version taught us.
 Fully parametric: adjust the dimensions to fit your own leg and setup.
 
+**This is a real device in daily use.** The designer has ridden it for
+**219 rides and about 2,878 miles** since December 18, 2023 (as of
+November 2026).
+
 | Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening |
 | --- | --- |
 | ![Cycle foot, top view](docs/images/cycle_foot-top.png) | ![Cycle foot, bottom view](docs/images/cycle_foot-bottom.png) |
