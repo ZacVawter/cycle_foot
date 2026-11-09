@@ -62,31 +62,52 @@ print and ride.
 The model includes a FreeCAD FEM analysis (`Analysis` in the model tree). It is
 set up so you can re-run it after changing the design or the material.
 
-### Current setup
+### Load case
+
+The design load comes from the bicycle pedal static strength test in
+**ISO 4210-8**, which applies **1500 N** to the pedal. The 2023 edition allows
+the force on clipless pedals to be applied through a cleat, which is how load
+enters this foot. With the **2× safety factor** from the requirements, the
+analysis applies **3000 N**.
+
+### Setup
 
 | Item | Setting |
 | --- | --- |
 | Solver | CalculiX (`SolverCcxTools`), linear static |
-| Mesh | Gmsh (`FEMMeshGmsh`), 2nd-order tetrahedra, min. element size 0.6 mm (~31k elements, ~54k nodes) |
+| Mesh | Gmsh (`FEMMeshGmsh`), 2nd-order tetrahedra with straight sides (`SecondOrderLinear` = true), min. element size 0.6 mm (~22k elements, ~38k nodes) |
 | Material | `PEHT` material object: Young's modulus 2.18 GPa (316,182 psi), Poisson's ratio 0.36 |
-| Fixed constraint | `ConstraintFixed`, two faces of the `Toe_Anchors` feature |
-| Load | `ConstraintForce`, **500 N** normal to one face of the `Toe_Anchors` feature |
+| Fixed constraint | `ConstraintFixed`: the pylon bore (`Face38` and `Face16`, the two halves of the 30 mm bore) |
+| Load | `ConstraintForce`: **3000 N** upward on the cleat pad (`Face86`, the underside of the foot bed under the cleat) |
 
 The modulus is close to Bambu PA6-CF's published Z-direction (between-layer)
 value of 2.17 GPa. That is a conservative choice, because the Z direction is
 the weakest direction of a print.
 
-### Last recorded results (v3.7, 500 N load)
+### Results (v3.7, 3000 N)
 
-| Result | Value |
-| --- | --- |
-| Max von Mises stress | 83 MPa |
-| Max displacement | 2.0 mm |
+| Region | Max von Mises | Max tension (principal) |
+| --- | --- | --- |
+| Foot bed, at the edge of the rear cleat insert hole (overall peak) | 58 MPa | — |
+| Foot bed, away from holes and constraints | — | 19 MPa (underside, between cleat and pylon) |
+| Gusset | 31 MPa | 14 MPa |
+| Pylon clamp | 18 MPa | 13 MPa |
+| **Whole part** | **58 MPa** | **21 MPa** |
 
-Peak stresses in a linear analysis often sit at the edges of fixed faces or at
-sharp corners, and are partly an artefact of the model there. Look at where the
-peak is, not only at its value, and compare the stress in the main load paths
-(gusset, pylon clamp, foot bed) with the material's strength.
+Max displacement: 2.5 mm.
+
+**How to read this.** 3D-printed parts usually fail in tension, and the weakest
+direction is between layers. The worst tension, 21 MPa, is about one-third of
+Bambu PAHT-CF's published between-layer tensile strength (64 MPa), even at the
+doubled 3000 N load. The von Mises peak sits at the edge of an empty insert
+hole. In the real part a brass insert fills that hole, so the model overstates
+the stress there. Even so, it stays below PA6-CF's 102 MPa in-plane strength.
+
+**Limits.** The model treats the part as solid and isotropic. A real print has
+80%+ infill, is weaker between layers, and contains brass inserts. It checks
+one static load. Impacts and the fatigue from repeated pedal strokes are not
+modelled. The riding record in the [README](README.md) is the evidence for
+those.
 
 ### Re-running after a change
 
@@ -95,13 +116,22 @@ peak is, not only at its value, and compare the stress in the main load paths
    filament's Young's modulus and Poisson's ratio from its technical data
    sheet. Use the Z-direction values if they are given.
 3. **Geometry change:** double-click `ConstraintFixed` and `ConstraintForce`
-   and check that they still highlight the intended faces. FreeCAD refers to
-   faces by number (`Face38`, `Face86` …), and these numbers can shift when
-   the geometry changes, which silently moves the constraints.
-4. Right-click `FEMMeshGmsh` and regenerate the mesh.
+   and check that they still highlight the pylon bore and the cleat pad.
+   FreeCAD refers to faces by number (`Face38`, `Face86` …), and these numbers
+   can shift when the geometry changes, which silently moves the constraints.
+4. **Always regenerate the mesh** (double-click `FEMMeshGmsh` and apply).
+   FreeCAD does not do this automatically. A stale mesh still solves, but its
+   results belong to the old geometry.
 5. Double-click `SolverCcxTools`, then write the input file and run CalculiX.
-6. Open `Pipeline_CCX_Results` and view the von Mises stress and
-   displacement. Compare them with the results above.
+6. Open `Pipeline_CCX_Results` and view the von Mises and max principal
+   stress. Look at **where** the peaks are, not just their values, and compare
+   them with the results above.
+
+> **Watch the force units.** FreeCAD 1.x stores forces in mN internally
+> (`mm·kg/s²`). A force entered in an older FreeCAD as a plain number such as
+> `500` (meaning newtons) is read by 1.x as **0.5 N**. Always type the unit,
+> for example `3000 N`. To check, open `ConstraintForce` and confirm it shows
+> `3000 N` (or `3000000 mm·kg/s²`).
 
 ## Requirements
 
@@ -143,8 +173,9 @@ taught us.
 #### Loads
 
 - **Z (vertical axis)**
-  - The ISO 4210-2 test standard specifies **1500 N** applied to the centre of
-    the pedal. This is the minimum design test load at the cleat.
+  - The bicycle pedal static strength test (ISO 4210-8, called up by the
+    requirements in ISO 4210-2) applies **1500 N** to the centre of the pedal.
+    This is the minimum design test load at the cleat.
   - Safety factor: **2×**
 - **Toe torsional axis**
   - Some torsional compliance in the toe can be useful. It lets the rider's hip
@@ -233,7 +264,8 @@ files, apart from V3.7, which the designer described directly.
   - Strengthened the tube clamp
   - Made the tube clamp slot a printable feature
   - Added more Z-shaped grip patterns to the sole
-  - FEA re-run for the current geometry
+  - FEA re-run at 3000 N (1500 N × 2) on a fresh mesh; see
+    [Structural analysis](#structural-analysis-fea)
 
 Printed in Bambu PAHT-CF and PA6-CF (current build) and ridden since
 December 2023. See the [README](README.md) for the riding record.
