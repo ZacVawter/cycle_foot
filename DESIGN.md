@@ -81,10 +81,11 @@ analysis applies **3000 N**.
 | Load | `ConstraintForce`: **3000 N** upward on the cleat pad (`Face86`, the underside of the foot bed under the cleat) |
 
 The modulus is close to Bambu PA6-CF's published Z-direction (between-layer)
-value of 2.17 GPa. That is a conservative choice, because the Z direction is
-the weakest direction of a print.
+value of 2.17 GPa. A single isotropic modulus is a simplification. A printed
+part is anisotropic, and choosing a low modulus does not by itself make the
+predicted stresses conservative.
 
-### Results (v3.7, 3000 N)
+### Results (v3.7, 3000 N): indicative only
 
 | Region | Max von Mises | Max tension (principal) |
 | --- | --- | --- |
@@ -96,18 +97,42 @@ the weakest direction of a print.
 
 Max displacement: 2.5 mm.
 
-**How to read this.** 3D-printed parts usually fail in tension, and the weakest
-direction is between layers. The worst tension, 21 MPa, is about one-third of
-Bambu PAHT-CF's published between-layer tensile strength (64 MPa), even at the
-doubled 3000 N load. The von Mises peak sits at the edge of an empty insert
-hole. In the real part a brass insert fills that hole, so the model overstates
-the stress there. Even so, it stays below PA6-CF's 102 MPa in-plane strength.
+**How to read this.** These results are **indicative, not a demonstrated
+safety factor**. They are most useful for showing where stress concentrates
+and for comparing design changes against each other.
+
+For reference only: the peak tension (21 MPa) and peak von Mises stress
+(58 MPa) are below the published specimen strengths of the filaments used
+(Bambu PAHT-CF, 64 MPa between layers; PA6-CF, 102 MPa in-plane). But specimen
+strengths do not transfer directly to a printed part, and an isotropic solid
+model cannot establish the safety margin of an anisotropic printed part.
+
+The von Mises peak is at the edge of a cleat insert hole, which is modelled as
+empty. How the brass insert changes the stress there depends on its contact
+and loading, which are not modelled.
 
 **Limits.** The model treats the part as solid and isotropic. A real print has
-80%+ infill, is weaker between layers, and contains brass inserts. It checks
-one static load. Impacts and the fatigue from repeated pedal strokes are not
-modelled. The riding record in the [README](README.md) is the evidence for
-those.
+80%+ infill, different strength between and along layers, layer-bonding
+variation from print to print, and brass inserts. It checks one static load
+case. Impacts and fatigue from repeated pedal strokes are not modelled. The
+riding record in the [README](README.md) is real-world experience from one
+rider and one setup, not a substitute for testing.
+
+### Validation
+
+Because the analysis is only indicative, **validate representative printed
+assemblies** with appropriate testing before relying on them. That means parts
+printed in the same material, with the same settings and orientation, and
+fitted with the same inserts, bolts, shoe shield and cleat. For example:
+
+- **Static test:** load the assembly through a cleat clipped into a pedal, as
+  in the ISO 4210-8 pedal static strength test (1500 N), and check for
+  cracking, permanent deformation or insert pull-out.
+- **Fatigue test:** apply repeated pedalling-level loads for many cycles, and
+  inspect for cracks, especially around the cleat inserts, the gusset and the
+  pylon clamp.
+
+Test results, or more detailed analysis, are very welcome as contributions.
 
 ### Re-running after a change
 

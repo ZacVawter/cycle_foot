@@ -7,12 +7,14 @@ clipless bike pedals. A separate printed sole with a grip pattern lets you
 walk short distances off the bike.
 
 Designed by an amputee, for amputees, in [FreeCAD](https://www.freecad.org/).
-It supports SPD and Crank Brothers cleats and is sized so Össur Total Knee
-users can still unlock the knee. See [DESIGN.md](DESIGN.md)
+It supports SPD and Crank Brothers cleats. The cleat sits 70 mm in front of
+the pylon, which lets the designer unlock an Össur Total Knee 2100 while
+riding. Whether it works for you depends on your knee, alignment and setup.
+See [DESIGN.md](DESIGN.md)
 for the requirements and what each version taught us.
 The model is fully parametric, so the design can be adapted if needed.
 
-**This is a real device in daily use.** The designer has ridden it for
+**This is a real device in regular use.** The designer has ridden it for
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
 November 2026).
 
@@ -22,9 +24,9 @@ November 2026).
 
 *Right: the designer's own setup, an Össur Total Knee 2100, with the cycle foot
 clamped to the pylon. A silicone sleeve slides over the outside of the
-socket and extends below the knee. It stops the socket and knee from
-damaging the bike's carbon frame if they hit it, just as the TPU sole does
-at the foot.*
+socket and extends below the knee. It is intended to reduce the risk of the
+socket and knee damaging the bike's carbon frame if they hit it, as is the
+TPU sole at the foot.*
 
 > ## ⚠️ Safety notice — read before use
 >
@@ -38,7 +40,8 @@ at the foot.*
 >   every ride**. Replace it at the first sign of damage.
 > - Start with low-intensity riding and build up gradually.
 > - **CRITICAL: Print quality, material and settings strongly affect
->   strength. A part printed by you is only as good as your print.**
+>   strength. A part printed by you is only as good as your print.** Do your
+>   own validation before relying on it.
 >
 > You use this design entirely at your own risk. See the disclaimer of
 > warranty and limitation of liability in [LICENSE](LICENSE), section 6.
@@ -47,18 +50,21 @@ at the foot.*
 
 ### Material
 
-Print the **Foot** in a carbon-fibre-filled nylon. Both of these have
-been used:
+The designer has printed the **Foot** in these two carbon-fibre-filled
+nylons:
 
 | Filament | Tensile strength (X–Y) | Data sheet |
 | --- | --- | --- |
 | Bambu Lab **PAHT-CF** | 88 ± 7 MPa | [TDS](https://cdn.shopify.com/s/files/1/0380/5149/files/Bambu_PAHT-CF_Technical_Data_Sheet.pdf) |
 | Bambu Lab **PA6-CF** (current build) | 102 ± 7 MPa | [TDS](https://polyalkemi.no/wp-content/uploads/2024/01/Bambu_PA6-CF_Technical_Data_Sheet-v2.pdf) |
 
-Broadly, **any filament with a printed-part tensile strength of roughly
-85 MPa or more (X–Y) should work**. Check the manufacturer's technical data
-sheet for printed specimens, not the raw filament. Do **not** use plain PLA or
-PETG for the Foot.
+This is what has worked for one rider, not a validated material
+specification. Other filaments with similar published strength may work, but
+data-sheet values come from test specimens, not from a printed foot. Your
+printer, settings, infill and filament moisture all change the result.
+**Whatever you print, do your own validation before relying on it** (see
+[DESIGN.md](DESIGN.md#validation)). Plain PLA and PETG are not recommended for
+the Foot.
 
 Nylon absorbs moisture, which weakens the print. Dry the filament before
 printing, following the manufacturer's data sheet, and print from a dry box.
@@ -70,14 +76,14 @@ printing, following the manufacturer's data sheet, and print from a dry box.
 | Infill | **80% or more** |
 | Orientation | Foot bed flat on the build plate, or tilted up to **20° toe-up** |
 
-Why this orientation: 3D-printed parts are weakest where one layer joins the
+The reasoning: 3D-printed parts are usually weakest where one layer joins the
 next. With the foot bed flat, the pylon clamp's hoop stress (from tightening
-the clamp bolts) and the load spread across the foot bed both run *along*
-the layers. A tilt of up to 20° toe-up has also been tested.
+the clamp bolts) and the load spread across the foot bed are intended to run
+mainly *along* the layers. Tilts of up to 20° toe-up have also been used.
 
-Print the **Sole** in **TPU**. It isn't structural, but the soft material
-protects the bike if the foot hits the frame, and it grips on a range of
-surfaces when you walk.
+Print the **Sole** in **TPU**. It isn't structural. The soft material is
+intended to help protect the bike if the foot hits the frame, and to grip on a
+range of surfaces when you walk.
 
 ### Installing the heat-set inserts
 
@@ -116,8 +122,8 @@ The pocket sizes also match E-Z LOK tapered inserts
 | Crankbrothers MTB Shoe Shields | 1 | Thin metal plate fitted between the cleat and the print |
 
 1. Fit a **Crankbrothers Shoe Shield** between the cleat and the foot bed. It
-   protects the printed surface from the cleat digging in and wearing it
-   away. You may need slightly longer cleat bolts to allow for its thickness.
+   helps protect the printed surface from the cleat digging in and wearing
+   it away. You may need slightly longer cleat bolts to allow for its thickness.
    Check that each bolt engages the full length of its insert.
 2. Bolt the cleat on through the shield into the M5 inserts.
 3. Slide the Foot onto the pylon and tighten the three M4 clamp bolts evenly.
@@ -130,7 +136,12 @@ changes, see **[DESIGN.md](DESIGN.md)**. It covers the design parameters, how
 to re-run the structural analysis (FEA), the requirements, and what earlier
 versions taught us.
 
-Ride reports, fit changes, photos and design improvements are welcome. Open an
+Further design analysis is especially welcome, including academic work:
+more detailed FEA (for example anisotropic material models or modelled
+inserts), physical static and fatigue testing of printed parts, or studies
+with other riders and setups. Open an issue to get in touch.
+
+Ride reports, fit changes, photos and design improvements are welcome too. Open an
 issue or a pull request. If you change the geometry or material, re-run the
 FEA, commit the updated `cad/cycle_foot.FCStd`, **and** re-run
 `tools/export.py` so the STEP/STL files match the source.
