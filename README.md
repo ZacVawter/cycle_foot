@@ -97,9 +97,6 @@ fit them. **Do NOT drill** them.
 | Cleat mount | 2 | M5 × 0.8, tapered | [94180A361](https://www.mcmaster.com/94180A361/) |
 | Pylon clamp | 3 | M4 × 0.7, 7.9 mm long, tapered | [94180A353](https://www.mcmaster.com/94180A353/) |
 
-The pocket sizes also match E-Z LOK tapered inserts
-([dimensional drawing](https://www.ezlok.com/assets/documents/dimensional_drawings/DimDwg_Ultra_Tapered.pdf)).
-
 1. Let the print cool completely. Clear any stringing or debris from the
    holes.
 2. Fit a soldering iron with a heat-set insert tip that matches the thread
