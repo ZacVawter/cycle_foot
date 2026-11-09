@@ -10,7 +10,7 @@ Designed by an amputee, for amputees, in [FreeCAD](https://www.freecad.org/).
 It supports SPD and Crank Brothers cleats and is sized so Össur Total Knee
 users can still unlock the knee. See [DESIGN.md](DESIGN.md)
 for the requirements and what each version taught us.
-Fully parametric: adjust the dimensions to fit your own leg and setup.
+The model is fully parametric, so the design can be adapted if needed.
 
 **This is a real device in daily use.** The designer has ridden it for
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
@@ -127,9 +127,10 @@ The pocket sizes also match E-Z LOK tapered inserts
 
 ## Design, customisation and analysis
 
-Most people only need the sections above. To change the dimensions for your
-leg, re-run the structural analysis (FEA), or read about the requirements and
-what earlier versions taught us, see **[DESIGN.md](DESIGN.md)**.
+Most people only need the sections above. If you want or need to make design
+changes, see **[DESIGN.md](DESIGN.md)**. It covers the design parameters, how
+to re-run the structural analysis (FEA), the requirements, and what earlier
+versions taught us.
 
 ## Contributing
 

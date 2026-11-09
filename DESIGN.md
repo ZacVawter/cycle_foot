@@ -6,7 +6,7 @@ understand why it looks the way it does. To **print and fit** the foot, the
 
 - [Repository layout](#repository-layout)
 - [Parts](#parts)
-- [Customising for your leg](#customising-for-your-leg)
+- [Design parameters](#design-parameters)
 - [Structural analysis (FEA)](#structural-analysis-fea)
 - [Requirements](#requirements)
 - [Previous learnings](#previous-learnings)
@@ -29,7 +29,7 @@ understand why it looks the way it does. To **print and fit** the foot, the
 | Foot | `exports/stl/cycle_foot-foot.stl` | Pylon clamp, gusset and cleat mount. Structural part. |
 | Sole | `exports/stl/cycle_foot-sole.stl` | TPU walking shell with Z-grip pattern and mud ramp |
 
-## Customising for your leg
+## Design parameters
 
 Open `cad/cycle_foot.FCStd` and edit the **`Parameters`** spreadsheet. The whole
 model updates from these values:
