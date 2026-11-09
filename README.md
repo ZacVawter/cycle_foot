@@ -2,7 +2,7 @@
 
 An open-source, 3D-printable **cycling foot for lower-limb prosthetics**. It
 clamps onto a standard 30 mm pylon tube in place of a regular prosthetic
-foot and gives you a cleat mount directly under the pylon, so you can clip into
+foot and gives you a cleat mount on the underside of the foot, so you can clip into
 clipless bike pedals. A separate printed sole with a grip pattern lets you
 walk short distances off the bike.
 
