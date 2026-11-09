@@ -16,17 +16,15 @@ The model is fully parametric, so the design can be adapted if needed.
 **219 rides and about 2,878 miles** since December 18, 2023 (as of
 November 2026).
 
-<img src="docs/images/cycle_foot-in-use.jpg" alt="The cycle foot (red) on an above-knee prosthesis with an Össur Total Knee 2100 under a silicone sleeve, clipped into a mountain bike pedal" width="420">
+| Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening | In use |
+| --- | --- | --- |
+| ![Cycle foot, top view](docs/images/cycle_foot-top.png) | ![Cycle foot, bottom view](docs/images/cycle_foot-bottom.png) | ![The cycle foot (red) on an above-knee prosthesis with an Össur Total Knee 2100 under a silicone sleeve, clipped into a mountain bike pedal](docs/images/cycle_foot-in-use.jpg) |
 
-*The designer's setup: an Össur Total Knee 2100, with the cycle foot
+*Right: the designer's own setup, an Össur Total Knee 2100, with the cycle foot
 clamped to the pylon. A silicone sleeve slides over the outside of the
 socket and extends below the knee. It stops the socket and knee from
 damaging the bike's carbon frame if they hit it, just as the TPU sole does
 at the foot.*
-
-| Top: Foot (black) in the Sole (red) | Bottom: Z-grip pattern and cleat opening |
-| --- | --- |
-| ![Cycle foot, top view](docs/images/cycle_foot-top.png) | ![Cycle foot, bottom view](docs/images/cycle_foot-bottom.png) |
 
 > ## ⚠️ Safety notice — read before use
 >
