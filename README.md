@@ -63,8 +63,10 @@ specification. Other filaments with similar published strength may work, but
 data-sheet values come from test specimens, not from a printed foot. Your
 printer, settings, infill and filament moisture all change the result.
 **Whatever you print, do your own validation before relying on it** (see
-[DESIGN.md](DESIGN.md#validation)). Plain PLA and PETG are not recommended for
-the Foot.
+[DESIGN.md](DESIGN.md#validation)).
+
+**Avoid PLA, resin and PETG for the Foot.** The designer has broken test feet
+printed in PLA and in resin.
 
 Nylon absorbs moisture, which weakens the print. Dry the filament before
 printing, following the manufacturer's data sheet, and print from a dry box.
