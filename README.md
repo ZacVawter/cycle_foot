@@ -125,20 +125,17 @@ The pocket sizes also match E-Z LOK tapered inserts
 3. Slide the Foot onto the pylon and tighten the three M4 clamp bolts evenly.
    Check that the foot can't rotate on the pylon before you ride.
 
-## Design, customisation and analysis
+## Design changes and contributing
 
 Most people only need the sections above. If you want or need to make design
 changes, see **[DESIGN.md](DESIGN.md)**. It covers the design parameters, how
 to re-run the structural analysis (FEA), the requirements, and what earlier
 versions taught us.
 
-## Contributing
-
 Ride reports, fit changes, photos and design improvements are welcome. Open an
 issue or a pull request. If you change the geometry or material, re-run the
 FEA, commit the updated `cad/cycle_foot.FCStd`, **and** re-run
-`tools/export.py` so the STEP/STL files match the source (see
-[DESIGN.md](DESIGN.md)).
+`tools/export.py` so the STEP/STL files match the source.
 
 ## License
 
